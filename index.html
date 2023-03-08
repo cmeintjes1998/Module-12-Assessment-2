@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="fontAwesome/css/all.css">
         <title>Advanced Contact Book</title>
     </head>
-    <body onload="fetchContacts()" class="bg-dark" id="content">
+    <body onload="fetchContacts()" class=" bg-dark">
         <div id="headdd">
         <h3 class="container text-center">
             <div id="h-under">
@@ -43,10 +43,9 @@
             <button type="button" class="btn btn-outline-success " id="refresh">Refresh</button>
         <!-- <button  type="button">Resfresh</button> -->
         <button type="button" class="btn btn-outline-success" id="addContact">Add Contact</button>
-       
-    </div>
         
     </div>
+        </br>
         <script src="config.js"></script>
         <script>
             document.getElementById("refresh").addEventListener('click' , fetchContacts);
@@ -67,11 +66,11 @@
                     for(a in data){
                         output+=`
                             <center><tr onclick="editContact(${data[a].id})">
-                                <td><i class="fas fa-angle-double-right"></i><img src="${rootPath}controller/uploads/${data[a].avatar}" width="80px" height="100p"</td>
+                                <td><i class="fas fa-angle-double-right"></i><img src="${rootPath}controller/uploads/${data[a].avatar}" width="60px" height="80p"</td>
                                 <td><h5>${data[a].firstname}</h5></td>
                                 <td><h5>${data[a].lastname}</h5></td>
                             </tr></center>
-                        `;
+                        `
                     }
                     output +="</table>";
                     document.getElementById("table").innerHTML = output;
@@ -82,8 +81,6 @@
             function editContact(id){
                 window.open("edit-contact.html?id=" + id , "_self");
             }
-            const element = document.getElementById("content");
-            element.scrollIntoView();
         </script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery-3.6.3.min.js"></script>
