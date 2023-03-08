@@ -1,6 +1,9 @@
 body{
     color:#fff;
     font-family:garamond;
+    background-repeat: no-repeat;
+    background-size:cover;
+    
 }
 #headdd{
     background-color:rgba(182, 177, 176, 0.8);
