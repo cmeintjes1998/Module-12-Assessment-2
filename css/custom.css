@@ -6,11 +6,13 @@ body{
     background-color:rgba(182, 177, 176, 0.8);
 }
 table{
-    padding-bottom:1rem;
+    padding-bottom:3rem;
     margin:auto;
 }
 td{
     padding-left:1rem;
+    padding-bottom:2rem;
+    padding-top:2rem;
     height:7rem;
 }
 tr{
@@ -101,4 +103,7 @@ border-radius:40%;
   }
   #carouselExampleSlidesOnly{
     margin-top:-8px;
+  }
+  #headdd{
+    overflow:hidden;
   }
