@@ -1,0 +1,104 @@
+body{
+    color:#fff;
+    font-family:garamond;
+}
+#headdd{
+    background-color:rgba(182, 177, 176, 0.8);
+}
+table{
+    padding-bottom:1rem;
+    margin:auto;
+}
+td{
+    padding-left:1rem;
+    height:7rem;
+}
+tr{
+    border-bottom:2px  #fff;
+    border-style: outset;
+}
+/* @media only screenand(min-width:458px){
+    tr{
+        margin-left:20%;
+    }
+} */
+
+#buttonadd{
+    padding-left:7px;
+}
+.button{
+    padding-left:5px;
+}
+.form input{
+    padding-bottom:5px;
+    margin-bottom:2rem;
+}
+
+
+
+#firstname{
+    margin-bottom: 2rem;
+}
+#lastname{
+    margin-bottom: 2rem;
+}
+#mobile{
+    margin-bottom: 2rem;
+    ;
+}
+#email{
+    margin-bottom: 2rem;
+}
+#avalabel{
+    font-size:large;
+    margin-bottom:1rem;
+}
+#mobi{
+    padding-left:19px;
+}
+#emi{
+    padding-left:25px;
+}
+#file{
+    padding-left:45px;
+}
+#subbutton{
+    padding-left:35px;
+}
+i{
+    padding-right:5px;
+    margin-left:-50px;
+    height:30px;
+}
+#mob{
+    padding-left:20px;
+}
+#mail{
+    padding-left:27px;
+}
+#profiletext{
+    font-size:large;
+}
+#homebut{
+    padding-left:35px;
+    
+   
+}
+table img{
+    border-radius:40%;
+    animation: fadeIn 5s;
+}
+#editimg{
+    animation: fadeIn 5s;
+border-radius:40%;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  #h-under{
+    border-bottom: 2px solid black;
+  }
+  #carouselExampleSlidesOnly{
+    margin-top:-8px;
+  }

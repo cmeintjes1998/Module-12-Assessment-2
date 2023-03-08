@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="device-width,initial-scale=1.0,shrink-to-fit=no">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="fontAwesome/css/all.css">
+    </head>
+    <body class="bg-dark">
+        <div id="headdd">
+            <h3 class="container text-center">
+                <div id="h-under">
+                <em>Contact Book</em><br/>
+            </div>
+                <small class="text-muted">You Can Now Add A New Contact</small>
+              </h3>
+            </div>
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/Capture.PNG" class="d-block w-100" height="200">
+              </div>
+              <div class="carousel-item">
+                <img src="images/Capture1.PNG" class="d-block w-100"height="200" >
+              </div>
+              <div class="carousel-item">
+                <img src="images/Capture3.PNG" class="d-block w-100" height="200">
+              </div>
+            </div>
+          </div>
+          <!-- after carousel -->
+        </br>
+            <h3 class="container text-center">
+                <em>Please Fill In The Form Below</em><br/>
+                <small class="text-muted"> </small>
+              </h3>
+            
+        </br>
+        <div class=" container overflow-hidden text-center">
+        <form id="editForm">
+            <label for="firstname">First name</label>
+            <input type="text" name="firstname" id="firstname"><br/>
+            <label for="lasttname">Last name</label>
+            <input type="text" name="lastname" id="lastname"><br/>
+            <div id="mobi">
+            <label for="mobile">mobile</label>
+            <input type="text" name="mobile" id="mobile"><br/>
+        </div>
+        <div id="emi">
+            <label for="firstname">Email</label>
+            <input type="text" name="email" id="email"><br/>
+        </div>
+        <div id="file">
+            <label for="avatar" id="avalabel">Select a file</label><br/>
+            <input type="file" name="avatar" id="avatar"><br/>
+        </div>
+    </br>
+    <div id="subbutton">
+            <button type="button" class="btn btn-outline-success " id="submitForm">Submit</button>
+        </div>
+    </form>
+
+    <br/>
+    <div id="homebut">
+        <button type="button" class="btn btn-outline-success " id="homeLink">Home</button>
+    </div>
+</div>
+    
+    <script src="config.js"></script>
+    <script>
+        document.getElementById("submitForm").addEventListener('click', submitForm);
+        document.getElementById("homeLink").addEventListener('click' , homeLink );
+        
+        function submitForm(e){
+            e.preventDefault();
+
+            const form = new FormData(document.querySelector('#editForm'));
+            form.append('apiKey' , apiKey);
+
+            fetch(rootPath + 'controller/insert-contact/', {
+                method:'POST',
+                header:{'ACCEPT' : 'application/json, *.*'},
+                body:form
+            })
+            .then(function(response){
+                return response.text();
+            })
+            .then(function(data){
+                if(data == "1"){
+                    alert("Contact added.");
+                    homeLink();
+                }else{
+                    alert(data)
+                    homeLink();
+                }
+            })
+        }
+        function homeLink(){
+            window.open("index.html" ,"_self" );
+        }
+
+    </script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-3.6.3.min.js"></script>
+    </body>
+</html>

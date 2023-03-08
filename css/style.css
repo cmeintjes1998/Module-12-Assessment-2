@@ -1,0 +1,25 @@
+#table{
+    border-bottom:1px sloid black;
+}
+body{
+    font-family:Raleway,sans-serif;
+    background-color:rgb(194, 232, 232);
+}
+button{
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 7px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 2px 0px;
+    cursor: pointer;
+    border-radius:30%;
+}
+td{
+    border-bottom:2px solid black;
+}
+
+ 
