@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="fontAwesome/css/all.css">
         <title>Advanced Contact Book</title>
     </head>
-    <body onload="fetchContacts()" class="bg-dark">
+    <body onload="fetchContacts()" class="bg-dark" id="content">
         <div id="headdd">
         <h3 class="container text-center">
             <div id="h-under">
@@ -82,6 +82,8 @@
             function editContact(id){
                 window.open("edit-contact.html?id=" + id , "_self");
             }
+            const element = document.getElementById("content");
+            element.scrollIntoView();
         </script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/jquery-3.6.3.min.js"></script>
